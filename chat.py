@@ -5,8 +5,6 @@ from twisted.web.static import File
 import time
 import cgi
 
-#this defines the webpage view to users
-
 webcontent="""
 <html>
 	<head>
@@ -32,8 +30,7 @@ webcontent="""
 	</script>
 </html>
 """
-
-# adds and reads messages in the chatlog for users to view
+	
 class chatlog():
 	def __init__(self):
 		self.history=""
@@ -45,7 +42,7 @@ class chatlog():
 		return self.history
 
 
-# the user creates and sends a chat
+
 class CHAT(Resource):	
 	def render_GET(self, request):
 		try:
