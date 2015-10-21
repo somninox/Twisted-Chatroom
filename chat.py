@@ -5,6 +5,8 @@ from twisted.web.static import File
 import time
 import cgi
 
+#this defines the webpage the user will see when using the chatroom
+#this is all html code
 webcontent="""
 <html>
 	<head>
@@ -30,7 +32,7 @@ webcontent="""
 	</script>
 </html>
 """
-	
+#this defines how the chatlog works but reading and adding messages from users in the chatroom
 class chatlog():
 	def __init__(self):
 		self.history=""
@@ -42,7 +44,7 @@ class chatlog():
 		return self.history
 
 
-
+#this defines how the user chats with other users in the chatroom
 class CHAT(Resource):	
 	def render_GET(self, request):
 		try:
